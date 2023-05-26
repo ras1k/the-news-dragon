@@ -10,14 +10,20 @@ const Home = () => {
         <div>
             <Header></Header>
             <Container>
-                <Row>
+                {/* <Row>
                     <Col sm={8}>sm=8</Col>
                     <Col sm={4}>sm=4</Col>
-                </Row>
+                </Row> */}
                 <Row>
-                    <Col sm>sm=true</Col>
-                    <Col sm>sm=true</Col>
-                    <Col sm>sm=true</Col>
+                    <Col lg={3}>
+
+                    </Col>
+                    <Col lg={3}>
+                    <h2>Main Content</h2>
+                    </Col>
+                    <Col lg={3}>
+
+                    </Col>
                 </Row>
             </Container>
             <Footer></Footer>

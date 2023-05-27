@@ -22,10 +22,10 @@ const router = createBrowserRouter([
         path: 'news',
         element: <NewsLayout></NewsLayout>,
         children: [
-            {
-                path: '/:id',
-                element
-            }
+            // {
+            //     path: '/:id',
+            //     element
+            // }
         ]
     },
 ]);

@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import RightNav from '../Shared/RightNav/RightNav';
+import LeftNav from '../Shared/LeftNav/LeftNav';
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
                 </Row> */}
                 <Row>
                     <Col lg={3}>
-                        <RightNav></RightNav>
+                        <LeftNav></LeftNav>
                     </Col>
                     <Col lg={6}>
                         <h2>Main Content</h2>

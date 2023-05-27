@@ -11,11 +11,7 @@ const Home = () => {
     return (
         <div className='container'>
             <Header></Header>
-            <Container>
-                {/* <Row>
-                    <Col sm={8}>sm=8</Col>
-                    <Col sm={4}>sm=4</Col>
-                </Row> */}
+            <Container className=''>
                 <Row>
                     <Col lg={3}>
                         <LeftNav></LeftNav>

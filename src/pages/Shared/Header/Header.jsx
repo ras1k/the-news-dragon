@@ -8,10 +8,12 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <Container className='container mb-2'>
-            <div className='text-center'>
-                <Link to="/"><img src={logo} alt="" /></Link>
-                <p className='text-secondary'>Journalism without fear or favor</p>
-                <p>{moment().format("dddd, MMMM Do YYYY")}</p>
+            <div className='text-center mx-auto'>
+                <div className='text-center'>
+                    <Link to="/"><img src={logo} alt="" /></Link>
+                    <p className='text-secondary'>Journalism without fear or favor</p>
+                    <p>{moment().format("dddd, MMMM Do YYYY")}</p>
+                </div>
             </div>
             <div className='d-flex mb-2'>
                 <div>

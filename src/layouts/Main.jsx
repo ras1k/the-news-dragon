@@ -17,7 +17,7 @@ const Main = () => {
                     <Col lg={3}>
                         <LeftNav></LeftNav>
                     </Col>
-                    <Col lg={6} className='text-center'>
+                    <Col lg={6} className=''>
                         <Outlet></Outlet>
                     </Col>
                     <Col lg={3}>

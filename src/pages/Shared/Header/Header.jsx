@@ -6,13 +6,13 @@ import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <Container className='container'>
+        <Container className='container mb-2'>
             <div className='text-center'>
                 <img src={logo} alt="" />
                 <p className='text-secondary'>Journalism without fear or favor</p>
                 <p>{moment().format("dddd, MMMM Do YYYY")}</p>
             </div>
-            <div className='d-flex'>
+            <div className='d-flex mb-2'>
                 <div>
                     <button className='btn btn-danger'>Latest</button>
                 </div>

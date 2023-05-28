@@ -3,12 +3,13 @@ import logo from '../../../assets/logo.png'
 import moment from 'moment';
 import Marquee from "react-fast-marquee";
 import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <Container className='container mb-2'>
             <div className='text-center'>
-                <img src={logo} alt="" />
+                <Link to="/"><img src={logo} alt="" /></Link>
                 <p className='text-secondary'>Journalism without fear or favor</p>
                 <p>{moment().format("dddd, MMMM Do YYYY")}</p>
             </div>
@@ -21,12 +22,12 @@ const Header = () => {
                 </Marquee>
             </div>
             <div>
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Navbar className='rounded mb-2 align-items-center' collapseOnSelect expand="lg" bg="light" variant="light">
                     <Container>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="#features">Home</Nav.Link>
+                                <Nav.Link><Link to="/" className='text-decoration-none text-secondary'>Home</Link></Nav.Link>
                                 <Nav.Link href="#pricing">About</Nav.Link>
                                 <Nav.Link href="#pricing">Career</Nav.Link>
                             </Nav>

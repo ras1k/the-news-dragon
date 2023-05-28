@@ -1,13 +1,12 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
 import moment from 'moment';
-import { FaBookmark, FaShareAlt } from "react-icons/fa";
+import { FaBookmark, FaEye, FaShareAlt } from "react-icons/fa";
 
 const NewsCard = ({ news }) => {
-    const { _id, title, details, image_url, author } = news;
+    const { _id, title, details, image_url, author, rating, total_view } = news;
     return (
         <div>
             <Card className=" mb-3">
@@ -31,7 +30,9 @@ const NewsCard = ({ news }) => {
                         }
                     </Card.Text>
                 </Card.Body>
-                <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                <Card.Footer className="text-muted">
+                        <FaEye/> {total_view}
+                </Card.Footer>
             </Card>
         </div>
     );

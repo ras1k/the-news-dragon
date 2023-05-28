@@ -1,0 +1,6 @@
+.links:hover{
+    background-color: rgba(115, 146, 131, 0.438);
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid rgb(255, 255, 255);
+}

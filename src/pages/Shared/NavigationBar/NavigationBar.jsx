@@ -12,13 +12,15 @@ const NavigationBar = () => {
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        {user && <Nav className="me-auto">
-                           <Link to="/" className='text-decoration-none text-secondary'>Home</Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
-                            <Nav.Link href="#pricing">Career</Nav.Link>
-                        </Nav>}
+                        <Nav className="me-auto">
+                            <div className='d-flex align-items-center'>
+                                <Link to="/" className='text-decoration-none text-secondary'>Home</Link>
+                                <Nav.Link href="#pricing">About</Nav.Link>
+                                <Nav.Link href="#pricing">Career</Nav.Link>
+                            </div>
+                        </Nav>
                         <Nav>
-                            { user && <FaUserCircle style={{ fontSize: '2rem' }} className='me-2' />}
+                            {user && <FaUserCircle style={{ fontSize: '2rem' }} className='me-2' />}
                             {
                                 user ?
                                     <Button variant='danger'>Logout</Button> :

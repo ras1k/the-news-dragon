@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to="/category/o"></Navigate>
+                element: <Navigate to="/category/0"></Navigate>
             },
             {
                 path: 'login',
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <Register></Register>
-            },
+            }
         ]
     },
     {

@@ -2,13 +2,13 @@ import React, { useContext } from 'react';
 import logo from '../../../assets/logo.png'
 import moment from 'moment';
 import Marquee from "react-fast-marquee";
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
-import { FaUserCircle } from 'react-icons/fa';
+// import { AuthContext } from '../../../providers/AuthProvider';
+// import { FaUserCircle } from 'react-icons/fa';
 
 const Header = () => {
-    const { user } = useContext(AuthContext)
+    // const { user } = useContext(AuthContext)
     return (
         <Container className='container mb-2'>
             <div className='text-center mx-auto'>
@@ -26,7 +26,7 @@ const Header = () => {
                     I can be a React component, multiple React components, or just some text.
                 </Marquee>
             </div>
-            <div>
+            {/* <div>
                 <Navbar className='rounded mb-2 align-items-center' collapseOnSelect expand="lg" bg="light" variant="light">
                     <Container>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -51,7 +51,7 @@ const Header = () => {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </div>
+            </div> */}
         </Container>
     );
 };

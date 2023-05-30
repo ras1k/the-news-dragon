@@ -8,6 +8,7 @@ const Register = () => {
     const {createUser} = useContext(AuthContext);
 
     const handleRegister = event => {
+        
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
@@ -24,6 +25,8 @@ const Register = () => {
         .catch(error => {
             console.error(error)
         })
+
+        form.reset();
     }
     
     return (

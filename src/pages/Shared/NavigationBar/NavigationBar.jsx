@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavigationBar = () => {
-    const { user } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () =>{
+        logOut()
+        .then()
+        .catch(error => console.log(error))
+    }
     return (
         <Container>
             <Navbar className='rounded mb-2 align-items-center' collapseOnSelect expand="lg" bg="light" variant="light">
@@ -23,7 +29,7 @@ const NavigationBar = () => {
                             {user && <FaUserCircle style={{ fontSize: '2rem' }} className='me-2' />}
                             {
                                 user ?
-                                    <Button variant='danger'>Logout</Button> :
+                                    <Button variant='danger' onClick={handleLogOut}>Logout</Button> :
                                     <Link to="/login">
                                         <Button variant='secondary'>Login</Button>
                                     </Link>

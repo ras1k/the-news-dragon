@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
 import { Container, Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
+    const from = location?.state?.from?.pathname || '/';
 
     const handleSignIn = event => {
         event.preventDefault();
@@ -18,13 +21,13 @@ const Login = () => {
             .then(result => {
                 const createdUser = result.user;
                 console.log(createdUser)
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error)
             })
 
-            form.reset();
+        form.reset();
     }
     return (
         <Container className='mx-auto w-50 card p-3'>

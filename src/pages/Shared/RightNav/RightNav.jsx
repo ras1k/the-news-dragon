@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
@@ -7,6 +7,9 @@ import bg from '../../../assets/bg.png'
 
 
 const RightNav = () => {
+
+    const context = useContext()
+
     return (
         <div className=''>
             <div className='text-center'>

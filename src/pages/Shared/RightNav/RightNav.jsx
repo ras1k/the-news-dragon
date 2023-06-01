@@ -4,16 +4,27 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import QZone from '../QZone/QZone';
 import bg from '../../../assets/bg.png'
+import { AuthContext } from '../../../providers/AuthProvider';
+import { signInWithPopup } from 'firebase/auth';
 
 
 const RightNav = () => {
 
-    const context = useContext()
+    const {googleSignIn} = useContext(AuthContext)
 
+    const handleGoogleSignIn = () =>{
+        googleSignIn()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
     return (
         <div className=''>
             <div className='text-center'>
-                <Button variant="outline-primary" className='w-100 mb-2 mt-2'> <FaGoogle />  Login With Google</Button>
+                <Button onClick={handleGoogleSignIn} variant="outline-primary" className='w-100 mb-2 mt-2'> <FaGoogle />  Login With Google</Button>
                 <Button variant="outline-secondary" className='w-100'> <FaGithub /> Login With Github</Button>
             </div>
             <div>

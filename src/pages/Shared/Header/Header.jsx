@@ -13,7 +13,7 @@ const Header = () => {
         <Container className='container mb-2'>
             <div className='text-center mx-auto'>
                 <div className='text-center'>
-                    <Link to="/"><img src={logo} alt="" /></Link>
+                    <Link to="/"><img src={logo} alt="" className='image-fluid w-50' /></Link>
                     <p className='text-secondary'>Journalism without fear or favor</p>
                     <p>{moment().format("dddd, MMMM Do YYYY")}</p>
                 </div>
@@ -23,35 +23,9 @@ const Header = () => {
                     <button className='btn btn-danger'>Latest</button>
                 </div>
                 <Marquee className='text-danger'>
-                    I can be a React component, multiple React components, or just some text.
+                    "Nothing in the world can take the place of Persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan 'Press On' has solved and always will solve the problems of the human race." —Calvin Coolidge
                 </Marquee>
             </div>
-            {/* <div>
-                <Navbar className='rounded mb-2 align-items-center' collapseOnSelect expand="lg" bg="light" variant="light">
-                    <Container>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                        <Navbar.Collapse id="responsive-navbar-nav">
-                            {user && <Nav className="me-auto">
-                                <Nav.Link><Link to="/" className='text-decoration-none text-secondary'>Home</Link></Nav.Link>
-                                <Nav.Link href="#pricing">About</Nav.Link>
-                                <Nav.Link href="#pricing">Career</Nav.Link>
-                            </Nav>}
-                            <Nav>
-                                <Nav.Link href="#deets"><FaUserCircle style={{ fontSize: '2rem' }} /></Nav.Link>
-                                <Nav.Link eventKey={2} href="#memes">
-                                    {
-                                        user ?
-                                            <Button variant='danger'>Logout</Button> :
-                                            <Link to="/login">
-                                                <Button variant='secondary'>Login</Button>
-                                            </Link>
-                                    }
-                                </Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            </div> */}
         </Container>
     );
 };
